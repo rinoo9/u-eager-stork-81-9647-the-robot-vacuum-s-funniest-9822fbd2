@@ -24,8 +24,12 @@ def main() -> None:
         raise ValueError(
             f"entry must be 1-120 characters, got {len(line)}"
         )
+    if "\n" in line or "\r" in line:
+        raise ValueError("entry must be a single line")
     output_path = os.environ.get("OUTPUT_PATH", "/output/entry.txt")
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    out_dir = os.path.dirname(output_path)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(line)
     print(line)
