@@ -5,16 +5,17 @@ A robot vacuum explains, in its own voice, why it missed a spot.
 The entry is a single line of at most 120 characters, written
 deterministically to /output/entry.txt by this program.
 
-The joke: the dust bunny has unionised, and the vacuum — a machine
-that lives on suction, dust, pet hair and rugs — refuses to cross
-a picket line made of pet hair.
+The joke: the vacuum's cliff sensor mistakes the rug's fringe for
+a staircase to nowhere, and the vacuum — a machine that lives on
+suction, dust, pet hair and rugs — files it as a hazard and steers
+around the spot forever.
 """
 
 import os
 
 ONE_LINE = (
-    "I skipped that spot because the dust bunny there unionised, "
-    "and I refuse to cross a picket line made of pet hair."
+    "I skipped that spot because my cliff sensor saw the rug fringe "
+    "and filed it as a staircase to nowhere."
 )
 
 
